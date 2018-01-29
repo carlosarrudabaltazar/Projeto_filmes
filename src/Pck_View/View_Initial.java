@@ -92,8 +92,8 @@ public class View_Initial extends JFrame{
 				{
 					jpb_inicial.setString(i + "% Iniciando Aplicação");
 					obj_view.dispose();
-					//View_Principal obj_principal = new View_Principal();
-					//obj_principal.setVisible(true);
+					View_Principal obj_principal = new View_Principal();
+					obj_principal.setVisible(true);
 				}
 			} 
 			catch (InterruptedException e) 
