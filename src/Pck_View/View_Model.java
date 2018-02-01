@@ -40,13 +40,13 @@ public class View_Model extends JDialog{
 	
 	public View_Model()
 	{
-		img_icone = new ImageIcon(getClass().getResource("/Pck_Imagens/Logo_corinto_branco.png"));
+		img_icone = new ImageIcon(getClass().getResource("/Pck_Images/Movie.jpg"));
 		
-		img_inserir = new ImageIcon(getClass().getResource("/Pck_Imagens/img_inserir.png"));
-		img_alterar = new ImageIcon(getClass().getResource("/Pck_Imagens/img_alterar.png"));
-		img_remover = new ImageIcon(getClass().getResource("/Pck_Imagens/img_remover.png"));
-		img_limpar = new ImageIcon(getClass().getResource("/Pck_Imagens/img_limpar.png"));
-		img_sair = new ImageIcon(getClass().getResource("/Pck_Imagens/img_sair.png"));
+		img_inserir = new ImageIcon(getClass().getResource("/Pck_Images/img_inserir.png"));
+		img_alterar = new ImageIcon(getClass().getResource("/Pck_Images/img_alterar.png"));
+		img_remover = new ImageIcon(getClass().getResource("/Pck_Images/img_remover.png"));
+		img_limpar = new ImageIcon(getClass().getResource("/Pck_Images/img_limpar.png"));
+		img_sair = new ImageIcon(getClass().getResource("/Pck_Images/img_sair.png"));
 		
 		this.setTitle("Título");
 		this.setSize(800,600);

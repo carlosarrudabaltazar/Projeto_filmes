@@ -8,8 +8,10 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+import Pck_View_Cadastro.View_Cadastro;
 
 public class View_Principal extends JFrame{
 	
@@ -20,10 +22,10 @@ public class View_Principal extends JFrame{
 	
 	JMenuBar jmb_principal;
 	
-	JMenu jm_cadastro;
-	JMenu jm_consulta;
-	JMenu jm_relatorio;
-	JMenu jm_sobre;
+	JMenuItem jmi_cadastro;
+	JMenuItem jmi_consulta;
+	JMenuItem jmi_relatorio;
+	JMenuItem jmi_sobre;
 	
 	JLabel jl_logo;
 	
@@ -52,17 +54,17 @@ public class View_Principal extends JFrame{
 		jmb_principal.setLayout(new FlowLayout(0,5,5));
 		getContentPane().add("North",jmb_principal);
 		
-			jm_cadastro = new JMenu("Cadastro");
-			jmb_principal.add(jm_cadastro);
+			jmi_cadastro = new JMenuItem("Cadastro");
+			jmb_principal.add(jmi_cadastro);
 			
-			jm_consulta = new JMenu("Consulta");
-			jmb_principal.add(jm_consulta);
+			jmi_consulta = new JMenuItem("Consulta");
+			jmb_principal.add(jmi_consulta);
 			
-			jm_relatorio = new JMenu("Relatórios");
-			jmb_principal.add(jm_relatorio);
+			jmi_relatorio = new JMenuItem("Relatórios");
+			jmb_principal.add(jmi_relatorio);
 			
-			jm_sobre = new JMenu("Sobre");
-			jmb_principal.add(jm_sobre);
+			jmi_sobre = new JMenuItem("Sobre");
+			jmb_principal.add(jmi_sobre);
 			
 		jl_logo = new JLabel(img_logo);
 		getContentPane().add("Center",jl_logo);
@@ -73,7 +75,14 @@ public class View_Principal extends JFrame{
 	
 	public void Define_Eventos()
 	{
-		
+		jmi_cadastro.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				View_Cadastro obj_cadastro = new View_Cadastro();
+				obj_cadastro.setVisible(true);
+			}
+		});
 	}
 
 }
