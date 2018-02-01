@@ -43,7 +43,7 @@ public class Database_Creation {
 							   "A02_ID        INTEGER        NOT NULL,"+
 							   "A03_PAG       INTEGER        NOT NULL,"+
 							   "A03_CASELA    INTEGER        NOT NULL,"+
-							   "FOREIGN KEY (A02_ID) REFERENCES A02_DISQUETEIRA (A02_ID),"+
+							   "FOREIGN KEY (A02_ID) REFERENCES A02_DISQUETEIRA (A02_ID) ON DELETE CASCADE,"+
 							   "PRIMARY KEY (A03_ID, A02_ID)"+
 							   ");";
 			obj_pst = obj_connection.getConnection().prepareStatement(A03_LOCAL);
@@ -63,8 +63,8 @@ public class Database_Creation {
 									  "A05_ID        INTEGER        PRIMARY KEY NOT NULL,"+
 									  "A04_ID        INTEGER,"+
 									  "A01_ID        INTEGER,"+
-									  "FOREIGN KEY (A04_ID) REFERENCES A04_FILMES (A04_ID),"+
-									  "FOREIGN KEY (A01_ID) REFERENCES A01_GENERO (A01_ID)"+
+									  "FOREIGN KEY (A04_ID) REFERENCES A04_FILMES (A04_ID) ON DELETE CASCADE,"+
+									  "FOREIGN KEY (A01_ID) REFERENCES A01_GENERO (A01_ID) ON DELETE CASCADE"+
 									  ");";
 			obj_pst = obj_connection.getConnection().prepareStatement(A05_GENERO_FILME);
 			obj_pst.execute();
@@ -75,8 +75,8 @@ public class Database_Creation {
 									 "A02_ID        INTEGER,"+
 									 "A03_ID        INTEGER,"+
 									 "A04_ID        INTEGER,"+
-									 "FOREIGN KEY (A02_ID,A03_ID) REFERENCES A03_LOCAL (A02_ID,A03_ID),"+
-									 "FOREIGN KEY (A04_ID) REFERENCES A04_FILMES (A04_ID)"+
+									 "FOREIGN KEY (A02_ID,A03_ID) REFERENCES A03_LOCAL (A02_ID,A03_ID) ON DELETE CASCADE,"+
+									 "FOREIGN KEY (A04_ID) REFERENCES A04_FILMES (A04_ID) ON DELETE CASCADE"+
 									 ");";
 			
 			obj_pst = obj_connection.getConnection().prepareStatement(A06_LOCAL_FILME);
