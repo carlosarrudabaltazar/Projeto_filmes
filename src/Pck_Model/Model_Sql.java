@@ -25,7 +25,7 @@ public class Model_Sql
 	private static final String consulta_geral = "SELECT FILMES.A04_TITULO AS TITULO, FILMES.A04_SUBTITULO AS SUBTITULO, GEN.A01_GENERO AS GENERO, DISQUE.A02_DISQUETEIRA AS DISQUETEIRA, LOCAL.A03_PAG AS PAGINA, LOCAL.A03_CASELA AS CASELA FROM A01_GENERO GEN, A02_DISQUETEIRA DISQUE, A03_LOCAL LOCAL, A04_FILMES FILMES, A05_GENERO_FILME GENF, A06_LOCAL_FILME LOCALF WHERE DISQUE.A02_ID = LOCAL.A02_ID AND GENF.A01_ID = GEN.A01_ID AND GENF.A04_ID = FILMES.A04_ID AND LOCALF.A02_ID = DISQUE.A02_ID AND  LOCALF.A04_ID = FILMES.A04_ID AND LOCALF.A03_ID = LOCAL.A03_ID;";
 	private static final String consulta_titulo = "";
 	private static final String consulta_subtitulo = "";
-	private static final String consulta_genero = "SELECT * FROM A01_GENERO;";
+	private static final String consulta_genero = "SELECT A01_ID, A01_GENERO FROM A01_GENERO;";
 	
 	public static String getInsertFilme() {
 		return insert_filme;
