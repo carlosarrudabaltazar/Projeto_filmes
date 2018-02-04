@@ -65,6 +65,7 @@ public class View_Cadastro_Disqueteira extends View_Model
 				obj_control.inserir((Integer) js_disqueteira.getValue());
 				cria_tabela();
 				clique_tabela(js_disqueteira);
+				js_disqueteira.setValue(1);
 			}
 		});
 		
@@ -75,6 +76,7 @@ public class View_Cadastro_Disqueteira extends View_Model
 				obj_control.alterar(a02_id,Integer.parseInt(js_disqueteira.getValue().toString()));
 				cria_tabela();
 				clique_tabela(js_disqueteira);
+				js_disqueteira.setValue(1);
 			}
 		});
 		
@@ -85,6 +87,7 @@ public class View_Cadastro_Disqueteira extends View_Model
 				obj_control.remover(a02_id);
 				cria_tabela();
 				clique_tabela(js_disqueteira);
+				js_disqueteira.setValue(1);
 			}
 		});
 		
@@ -136,7 +139,7 @@ public class View_Cadastro_Disqueteira extends View_Model
 				int linha = alvo.getSelectedRow();
 				
 				a02_id = Integer.parseInt(jt_tabela.getValueAt(linha,0).toString());
-				js_spinner.setValue(jt_tabela.getValueAt(linha,1));
+				js_spinner.setValue(Integer.parseInt(jt_tabela.getValueAt(linha,1).toString()));
 			}
 		});
 	}

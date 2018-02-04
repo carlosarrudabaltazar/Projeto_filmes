@@ -49,7 +49,7 @@ public class Control_Genero_Filme
 		
 		try 
 		{
-			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getInsertGeneroFilme());
+			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getAlterGeneroFilme());
 			obj_pst.setInt(1,obj_model.getA04_id());
 			obj_pst.setInt(2,obj_model.getA01_id());
 			obj_pst.setInt(3,obj_model.getA05_id());
@@ -69,7 +69,7 @@ public class Control_Genero_Filme
 		
 		try 
 		{
-			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getInsertGeneroFilme());
+			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getDeleteGeneroFilme());
 			obj_pst.setInt(1,obj_model.getA05_id());
 			obj_pst.execute();
 			

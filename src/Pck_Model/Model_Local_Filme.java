@@ -3,7 +3,6 @@ package Pck_Model;
 public class Model_Local_Filme {
 	
 	private int a06_id;
-	private int a02_id;
 	private int a03_id;
 	private int a04_id;
 	
@@ -12,12 +11,6 @@ public class Model_Local_Filme {
 	}
 	public void setA06_id(int a06_id) {
 		this.a06_id = a06_id;
-	}
-	public int getA02_id() {
-		return a02_id;
-	}
-	public void setA02_id(int a02_id) {
-		this.a02_id = a02_id;
 	}
 	public int getA03_id() {
 		return a03_id;

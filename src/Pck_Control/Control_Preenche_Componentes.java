@@ -92,10 +92,8 @@ public class Control_Preenche_Componentes
 	{
 		ArrayList<Integer> list_codigo = new ArrayList<Integer>();
 		list_codigo.clear();
-		list_codigo.add(0);
 		
 		jcb.removeAllItems();
-		jcb.addItem(" ");
 		
 		obj_connection.getConnection();
 		

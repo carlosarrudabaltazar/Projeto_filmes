@@ -18,7 +18,7 @@ public class Control_Filmes
 	
 	PreparedStatement obj_pst;
 	
-	public void inserir(String a04_titulo, String a04_subtitulo)
+	public int inserir(String a04_titulo, String a04_subtitulo)
 	{
 		obj_model.setA04_id(obj_pc.pega_id(Model_Sql.getPegaCodFilme()));
 		obj_model.setA04_titulo(a04_titulo);
@@ -38,6 +38,8 @@ public class Control_Filmes
 		{
 			JOptionPane.showMessageDialog(null,"Falha ao inserir registro! "+erro.toString(),"Erro!",JOptionPane.ERROR_MESSAGE);
 		}
+		
+		return obj_model.getA04_id();
 	}
 	
 	public void alterar(int a04_id, String a04_titulo, String a04_subtitulo)

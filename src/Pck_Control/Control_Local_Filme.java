@@ -18,10 +18,10 @@ public class Control_Local_Filme
 	
 	PreparedStatement obj_pst;
 	
-	public void inserir(int a02_id, int a03_id, int a04_id)
+	public void inserir(int a03_id, int a04_id)
 	{
+				
 		obj_model.setA06_id(obj_pc.pega_id(Model_Sql.getPegaCodLocalFilme()));
-		obj_model.setA02_id(a02_id);
 		obj_model.setA03_id(a03_id);
 		obj_model.setA04_id(a04_id);
 		
@@ -29,9 +29,8 @@ public class Control_Local_Filme
 		{
 			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getInsertLocalFilme());
 			obj_pst.setInt(1,obj_model.getA06_id());
-			obj_pst.setInt(2,obj_model.getA02_id());
-			obj_pst.setInt(3,obj_model.getA03_id());
-			obj_pst.setInt(4,obj_model.getA04_id());
+			obj_pst.setInt(2,obj_model.getA03_id());
+			obj_pst.setInt(3,obj_model.getA04_id());
 			obj_pst.execute();
 			
 			obj_pst.close();
@@ -42,20 +41,18 @@ public class Control_Local_Filme
 		}
 	}
 	
-	public void alterar(int a06_id, int a02_id, int a03_id, int a04_id)
+	public void alterar(int a06_id, int a03_id, int a04_id)
 	{
 		obj_model.setA06_id(a06_id);
-		obj_model.setA02_id(a02_id);
 		obj_model.setA03_id(a03_id);
 		obj_model.setA04_id(a04_id);
 		
 		try 
 		{
 			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getAlterLocalFilme());
-			obj_pst.setInt(1,obj_model.getA02_id());
-			obj_pst.setInt(2,obj_model.getA03_id());
-			obj_pst.setInt(3,obj_model.getA04_id());
-			obj_pst.setInt(4,obj_model.getA06_id());
+			obj_pst.setInt(1,obj_model.getA03_id());
+			obj_pst.setInt(2,obj_model.getA04_id());
+			obj_pst.setInt(3,obj_model.getA06_id());
 			obj_pst.executeUpdate();
 			
 			obj_pst.close();
@@ -72,7 +69,7 @@ public class Control_Local_Filme
 		
 		try 
 		{
-			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getAlterLocalFilme());
+			obj_pst = obj_connection.getConnection().prepareStatement(Model_Sql.getDeleteLocalFilme());
 			obj_pst.setInt(1,obj_model.getA06_id());
 			obj_pst.execute();
 			
