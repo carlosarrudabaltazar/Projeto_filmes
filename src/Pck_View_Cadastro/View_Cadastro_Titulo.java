@@ -17,13 +17,14 @@ import Pck_View.View_Model;
 import Pck_Control.Control_Preenche_Componentes;
 import Pck_Model.Model_Sql;
 
-public class View_Cadastro extends View_Model
+public class View_Cadastro_Titulo extends View_Model
 {
 	private static final long serialVersionUID = 1L;
 	
 	Control_Preenche_Componentes obj_pc = new Control_Preenche_Componentes();
 
 	private JComboBox<String> jcb_genero;
+	private JComboBox<String> jcb_disqueteira;
 	
 	private JLabel jl_genero;
 	private JLabel jl_titulo;
@@ -35,28 +36,27 @@ public class View_Cadastro extends View_Model
 	private JTextField jtf_titulo;
 	private JTextField jtf_subtitulo;
 	
-	private SpinnerNumberModel snm_disqueteira;
 	private SpinnerNumberModel snm_pag;
 	private SpinnerNumberModel snm_casela;
 	
-	private JSpinner js_disqueteira;
 	private JSpinner js_pag;
 	private JSpinner js_casela;
 	
 	
 	ArrayList<Integer> codigo_genero;
+	ArrayList<Integer> codigo_disqueteira;
 	
-	public View_Cadastro()
+	public View_Cadastro_Titulo()
 	{
 		inicia_componentes();
-		eventos();
+		Eventos();
 		cria_tabela();
 		clique_tabela();
 	}
 	
 	public void inicia_componentes() 
 	{
-		this.setTitle("Cadastro de título");
+		this.setTitle("Cadastro de tÃ­tulo");
 		jp_cadastro.setLayout(new FlowLayout(0,0,30));
 		jp_cadastro.setPreferredSize(new Dimension(400,440));
 		
@@ -65,11 +65,11 @@ public class View_Cadastro extends View_Model
 		jp_cadastro.add(jl_genero);
 		
 		jcb_genero = new JComboBox<String>();
-		codigo_genero = obj_pc.preenche_jcombobox(Model_Sql.getConsultaGenero(), "A01_ID", "A01_GENERO", jcb_genero);
+		codigo_genero = obj_pc.preenche_jcombobox(Model_Sql.getConsultaGenero(), "ID", "GENERO", jcb_genero);
 		jcb_genero.setPreferredSize(new Dimension(200,20));
 		jp_cadastro.add(jcb_genero);
 		
-		jl_titulo = new JLabel("Título: ",JLabel.RIGHT);
+		jl_titulo = new JLabel("TÃ­tulo: ",JLabel.RIGHT);
 		jl_titulo.setPreferredSize(new Dimension(150,20));
 		jp_cadastro.add(jl_titulo);
 		
@@ -77,7 +77,7 @@ public class View_Cadastro extends View_Model
 		jtf_titulo.setPreferredSize(new Dimension(200,20));
 		jp_cadastro.add(jtf_titulo);
 		
-		jl_subtitulo = new JLabel("Subtítulo: ",JLabel.RIGHT);
+		jl_subtitulo = new JLabel("Subtitulo: ",JLabel.RIGHT);
 		jl_subtitulo.setPreferredSize(new Dimension(150,20));
 		jp_cadastro.add(jl_subtitulo);
 		
@@ -89,12 +89,12 @@ public class View_Cadastro extends View_Model
 		jl_disqueteira.setPreferredSize(new Dimension(150,20));
 		jp_cadastro.add(jl_disqueteira);
 		
-		snm_disqueteira = new SpinnerNumberModel(1,1,1000,1);
-		js_disqueteira = new JSpinner(snm_disqueteira);
-		js_disqueteira.setPreferredSize(new Dimension(150,20));
-		jp_cadastro.add(js_disqueteira);
+		jcb_disqueteira = new JComboBox<String>();
+		codigo_disqueteira = obj_pc.preenche_jcombobox(Model_Sql.getConsultaDisqueteira(), "ID", "DISQUETEIRA", jcb_disqueteira);
+		jcb_disqueteira.setPreferredSize(new Dimension(200,20));
+		jp_cadastro.add(jcb_disqueteira);
 		
-		jl_pag = new JLabel("Página: ",JLabel.RIGHT);
+		jl_pag = new JLabel("PÃ¡gina: ",JLabel.RIGHT);
 		jl_pag.setPreferredSize(new Dimension(150,20));
 		jp_cadastro.add(jl_pag);
 		
@@ -113,7 +113,7 @@ public class View_Cadastro extends View_Model
 		jp_cadastro.add(js_casela);
 	}
 	
-	public void eventos() 
+	public void Eventos() 
 	{
 		
 	}

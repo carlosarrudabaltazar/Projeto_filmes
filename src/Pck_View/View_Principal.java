@@ -8,10 +8,12 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import Pck_View_Cadastro.View_Cadastro;
+import Pck_View_Cadastro.View_Cadastro_Disqueteira;
+import Pck_View_Cadastro.View_Cadastro_Titulo;
 
 public class View_Principal extends JFrame{
 	
@@ -22,7 +24,10 @@ public class View_Principal extends JFrame{
 	
 	JMenuBar jmb_principal;
 	
-	JMenuItem jmi_cadastro;
+	JMenu jm_cadastro;
+	
+	JMenuItem jmi_cadastro_titulo;
+	JMenuItem jmi_cadastro_disqueteira;
 	JMenuItem jmi_consulta;
 	JMenuItem jmi_relatorio;
 	JMenuItem jmi_sobre;
@@ -54,8 +59,14 @@ public class View_Principal extends JFrame{
 		jmb_principal.setLayout(new FlowLayout(0,5,5));
 		getContentPane().add("North",jmb_principal);
 		
-			jmi_cadastro = new JMenuItem("Cadastro");
-			jmb_principal.add(jmi_cadastro);
+			jm_cadastro = new JMenu("Cadastro");
+			jmb_principal.add(jm_cadastro);
+			
+				jmi_cadastro_titulo = new JMenuItem("Cadastrar Título");
+				jm_cadastro.add(jmi_cadastro_titulo);
+				
+				jmi_cadastro_disqueteira = new JMenuItem("Cadastrar Disqueteira");
+				jm_cadastro.add(jmi_cadastro_disqueteira);
 			
 			jmi_consulta = new JMenuItem("Consulta");
 			jmb_principal.add(jmi_consulta);
@@ -75,12 +86,21 @@ public class View_Principal extends JFrame{
 	
 	public void Define_Eventos()
 	{
-		jmi_cadastro.addActionListener(new ActionListener() 
+		jmi_cadastro_titulo.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				View_Cadastro obj_cadastro = new View_Cadastro();
-				obj_cadastro.setVisible(true);
+				View_Cadastro_Titulo obj_titulo = new View_Cadastro_Titulo();
+				obj_titulo.setVisible(true);
+			}
+		});
+		
+		jmi_cadastro_disqueteira.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				View_Cadastro_Disqueteira obj_disqueteira = new View_Cadastro_Disqueteira();
+				obj_disqueteira.setVisible(true);
 			}
 		});
 	}

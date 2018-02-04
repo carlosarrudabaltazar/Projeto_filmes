@@ -1,6 +1,6 @@
 package Pck_Model;
 
-public class Model_Genero_Model {
+public class Model_Genero_Filme {
 
 	private int a05_id;
 	private int a04_id;

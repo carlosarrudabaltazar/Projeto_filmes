@@ -120,5 +120,27 @@ public class Control_Preenche_Componentes
 		
 		return list_codigo;
 	}
+	
+	public int pega_id (String sql)
+	{
+		int id = 0;
+		
+		try 
+		{
+			obj_pst = obj_connection.getConnection().prepareStatement(sql);
+			obj_rs = obj_pst.executeQuery();
+			
+			id = obj_rs.getInt("ID");
+			
+			obj_pst.close();
+			obj_rs.close();
+		} 
+		catch (SQLException erro) 
+		{
+			JOptionPane.showMessageDialog(null,"Falha ao selecionar o maior ID! "+erro.toString(),"Erro!",JOptionPane.ERROR_MESSAGE);
+		}
+				
+		return id;
+	}
 
 }

@@ -81,12 +81,85 @@ public class Database_Creation {
 			
 			obj_pst = obj_connection.getConnection().prepareStatement(A06_LOCAL_FILME);
 			obj_pst.execute();
+			
+			//alimenta tabela genero
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (1,'Ação');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (2,'Animação');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (3,'Aventura');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (4,'Cinema de arte');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (5,'Chanchada');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (6,'Cinema catástrofe');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (7,'Comédia');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (8,'Comédia romântica');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (9,'Comédia dramática');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (10,'Comédia de ação');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (11,'Cult');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (12,'Dança');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (13,'Documentários');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (14,'Drama');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (15,'Espionagem');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (16,'Erótico');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (17,'Fantasia');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (18,'Faroeste');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (19,'Ficção Científica');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (20,'Série');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (21,'Guerra');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (22,'Machinima');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (23,'Masala');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (24,'Musical');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (25,'Filme noir');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (26,'Policial');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (27,'Pornochanchada');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (28,'Pornográfico');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (29,'Robologia');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (30,'Romance');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (31,'Seriado');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (32,'Suspense');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (33,'Terror');");
+			obj_pst.execute();
+			obj_pst = obj_connection.getConnection().prepareStatement("INSERT INTO A01_GENERO (A01_ID,A01_GENERO) VALUES (34,'Trash');");
+			obj_pst.execute();
+
+			obj_pst.close();
 		}
 		catch (SQLException erro) 
 		{
-			System.out.println("Erro na execu��o do script do banco de dados: "+erro);
-			JOptionPane.showMessageDialog(null,"Erro cra��o do banco de dados! "+erro,"Erro!",JOptionPane.ERROR_MESSAGE);
+			System.out.println("Erro na execu��o do script do banco de dados: "+erro);
+			JOptionPane.showMessageDialog(null,"Erro cra��o do banco de dados! "+erro,"Erro!",JOptionPane.ERROR_MESSAGE);
 		}
+		
 	}
 
 }
