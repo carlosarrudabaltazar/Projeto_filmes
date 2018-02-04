@@ -51,7 +51,7 @@ public class View_Initial extends JFrame{
 			jl_logo = new JLabel(img_logo);
 			jp_logo.add("Center", jl_logo);
 			
-			jl_autor = new JLabel("Controle de acervo \t © 2016 Carlos Arruda Baltazar \t TODOS OS DIREITOS RESERVADOS");
+			jl_autor = new JLabel("Controle de acervo \t Â©â€Ž 2016 Carlos Arruda Baltazar \t TODOS OS DIREITOS RESERVADOS");
 			jp_logo.add("South", jl_autor);
 		
 		jp_barra = new JPanel();
@@ -90,7 +90,7 @@ public class View_Initial extends JFrame{
 				}
 				if(i==100)
 				{
-					jpb_inicial.setString(i + "% Iniciando Aplicação");
+					jpb_inicial.setString(i + "% Iniciando AplicaÃ§Ã£o");
 					obj_view.dispose();
 					View_Principal obj_principal = new View_Principal();
 					obj_principal.setVisible(true);

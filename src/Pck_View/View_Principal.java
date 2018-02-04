@@ -60,7 +60,7 @@ public class View_Principal extends JFrame{
 			jmi_consulta = new JMenuItem("Consulta");
 			jmb_principal.add(jmi_consulta);
 			
-			jmi_relatorio = new JMenuItem("Relatórios");
+			jmi_relatorio = new JMenuItem("RelatÃ³rios");
 			jmb_principal.add(jmi_relatorio);
 			
 			jmi_sobre = new JMenuItem("Sobre");
@@ -69,7 +69,7 @@ public class View_Principal extends JFrame{
 		jl_logo = new JLabel(img_logo);
 		getContentPane().add("Center",jl_logo);
 		
-		jl_autor = new JLabel("© 2016 Carlos Arruda Baltazar \t TODOS OS DIREITOS RESERVADOS");
+		jl_autor = new JLabel("Â©â€Ž 2016 Carlos Arruda Baltazar \t TODOS OS DIREITOS RESERVADOS");
 		getContentPane().add("South",jl_autor);
 	}
 	
