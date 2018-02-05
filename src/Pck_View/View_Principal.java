@@ -14,6 +14,7 @@ import javax.swing.JMenuItem;
 
 import Pck_View_Cadastro.View_Cadastro_Disqueteira;
 import Pck_View_Cadastro.View_Cadastro_Titulo;
+import Pck_View_Consulta.View_Consulta;
 
 public class View_Principal extends JFrame{
 	
@@ -29,8 +30,8 @@ public class View_Principal extends JFrame{
 	JMenuItem jmi_cadastro_titulo;
 	JMenuItem jmi_cadastro_disqueteira;
 	JMenuItem jmi_consulta;
-	JMenuItem jmi_relatorio;
-	JMenuItem jmi_sobre;
+	//JMenuItem jmi_relatorio;
+	//JMenuItem jmi_sobre;
 	
 	JLabel jl_logo;
 	
@@ -71,11 +72,13 @@ public class View_Principal extends JFrame{
 			jmi_consulta = new JMenuItem("Consulta");
 			jmb_principal.add(jmi_consulta);
 			
+			/*
 			jmi_relatorio = new JMenuItem("Relatórios");
 			jmb_principal.add(jmi_relatorio);
 			
 			jmi_sobre = new JMenuItem("Sobre");
 			jmb_principal.add(jmi_sobre);
+			*/
 			
 		jl_logo = new JLabel(img_logo);
 		getContentPane().add("Center",jl_logo);
@@ -101,6 +104,15 @@ public class View_Principal extends JFrame{
 			{
 				View_Cadastro_Disqueteira obj_disqueteira = new View_Cadastro_Disqueteira();
 				obj_disqueteira.setVisible(true);
+			}
+		});
+		
+		jmi_consulta.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				View_Consulta obj_consulta = new View_Consulta();
+				obj_consulta.setVisible(true);
 			}
 		});
 	}
